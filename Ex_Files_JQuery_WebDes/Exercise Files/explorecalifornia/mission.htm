@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>A little about us...</title>
+<link href="_css/main.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+	#mainContent #rep-lookup {
+		font-family: georgia, serif;
+	}
+	
+	#rep-lookup div {
+		margin: 0 0 1em;
+	}
+	
+	#rep-lookup input[type=text] {
+		width: 8em;
+	}
+	
+	#rep-lookup-results {
+		color: #999;
+	}
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <h1><a href="index.htm" title="Return to the home page">Welcome to Explore California!</a></h1>
+  </div>
+  <div id="mainNav">
+    <ul id="baseNav">
+      <li><a href="tours.htm" title="Explore our tours" class="tours">Tours</a></li>
+      <li><a href="mission.htm" title="What we think" class="mission current">Mission</a></li>
+      <li><a href="contact.htm" title="Contact and support" class="contact">Contact</a></li>
+      <li><a href="resources.htm" title="Guidance and planning" class="resources">Resources</a></li>
+      <li><a href="explorers.htm" title="Join our community" class="explorers">Explorers</a></li>
+    </ul>
+</div>
+  <div id="mainContent">
+    <h1 id="pageID">Mission</h1>
+    <div id="mainArticle">
+		<h1>Advocacy</h1>
+		
+		<p>
+		We are very much in favor of <a href="http://www.govtrack.us/congress/bills/113/s39">Senate bill XYZABC</a>.  Please write a letter to your representatives asking for their support on this important bill.
+		</p>
+		
+		<h3>Who Are My Representatives?</h3>
+		
+		<p>
+		Fill in your address and we will look up the answer.  This requires JavaScript to work.  If you can't find them here, <a href="http://www.opencongress.org/people/senators" target="_blank">try OpenCongress</a>.
+		</p>
+		
+		<form action="" id="rep-lookup">
+			<div>
+			<label for="txt-zip">ZIP code:</label>
+			<input type="text" id="txt-zip" name="zip" required />
+			</div>
+			
+			<div>
+			<input type="submit" id="btn-lookup" value="Look up my reps" />
+			</div>
+		</form>
+		
+		<div id="rep-lookup-results">
+			<em>When senators are found, they will be displayed here.</em>
+		</div>
+    </div>
+    
+    
+    
+    </div>
+  <div id="sidebar">
+      <div id="specials" class="callOut">
+        <h1>Monthly Specials</h1>
+        <h2 class="top"><img src="_images/calm_bug.gif" width="75" height="75" alt="California Calm" />California Calm</h2>
+        <p>Day Spa Package <br />
+          <a href="tours/tour_detail_cycle.htm">$250</a>        </p>
+        <h2><img src="_images/desert_bug.gif" width="75" height="75" alt="From desert to sea" />From Desert to Sea</h2>
+        <p>2 Day Salton Sea <br />
+          <a href="tours/tour_detail_cycle.htm">$350</a></p>
+        <h2><img src="_images/backpack_bug.gif" width="75" height="41" alt="Backpack Cali" />Backpack Cali</h2>
+        <p>Big Sur Retreat <br />
+          <a href="tours/tour_detail_cycle.htm">$620</a></p>
+      </div>
+
+    </div>
+  <div id="footer">
+<div id="footerMenu">
+  <h3>Quick Nav</h3>
+    <ul id="quickNav">
+      <li><a href="tours.htm" title="Explore our tours">Tours</a></li>
+      <li><a href="mission.htm" title="What we think">Mission</a></li>
+      <li><a href="contact.htm" title="Contact and support">Contact</a></li>
+      <li><a href="resources.htm" title="Guidance and planning">Resources</a></li>
+      <li><a href="explorers.htm" title="Join our community">Explorers</a></li>
+    </ul>
+</div>
+  <div id="footerBody">
+  <div id="footerMidCol">
+      <h3><a href="resources/faq.htm">FAQ</a></h3>
+      <p>Find out more about our tours</p>
+      <h3><a href="contact.htm">Support</a></h3>
+      <p>Need help? It's just a click away!</p>
+      <h3><a href="explorers/join.htm">Legal Disclaimer</a></h3>
+    </div>
+    <div id="footerRightCol">
+      <h1>Explore California</h1>
+      <p>5605 Nota Street<br />
+        Ventura, CA 93003</p>
+      <p class="phone">866.555.4310</p>
+    </div>
+</div>
+  </div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="_scripts/jquery.min.js"><\/script>')</script>
+<script>
+'use strict';
+
+$(document).ready(function () {
+	$('#rep-lookup').submit(function(e){
+		e.preventDefault();
+		
+		var apiKey = '0f088c7409054f8c86318d8d969a5ca6',
+			zipCode = $('#txt-zip').val(),
+			$resultsArea = $('#rep-lookup-results');
+		
+		var requestURL = 'http://congress.api.sunlightfoundation.com/legislators/locate?callback=?';
+
+		$.getJSON(requestURL, {
+			'apikey' : apiKey,
+			'zip' : zipCode,
+		}, function(data){
+			console.log(data);
+			
+			if (data.results && data.results.length > 0) {
+			
+				var mySenators = '<p>Here are your Senators:</p>';
+			
+				$.each(data.results, function(i, rep) {
+					if ('senate' === rep.chamber.toLowerCase()) {
+						mySenators += '<p>';
+						mySenators += '<a href="' + rep.contact_form + '" target="_blank">';
+						mySenators += rep.first_name + ' ' + rep.last_name;
+						mySenators += '</a>';
+						mySenators += '</p>';
+					}
+				});
+			
+				mySenators += '<p>Please write to them in support of this legislation.</p>';
+			
+				$resultsArea.html(mySenators);
+			} else {
+				$resultsArea.html('<p>No senators found for zip code ' + zipCode + '. Please try again.</p>');
+			}
+		});
+	});
+});
+
+
+</script>
+</body>
+</html>

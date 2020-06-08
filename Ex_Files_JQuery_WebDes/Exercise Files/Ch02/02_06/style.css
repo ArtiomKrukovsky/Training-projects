@@ -1,0 +1,38 @@
+body {
+    background-color: #efefef;
+    color: #222;
+    font-family: helveticaneue, "Helvetica Neue", helvetica, sans-serif;
+    padding: 2em;
+}
+
+h1 {
+	border-bottom: 1px solid #8999af;
+	margin-bottom: 0.5em;
+	padding-bottom: 0.5em;
+	color: #3A497B;
+}
+
+#page {
+	max-width: 43.75em;
+	margin: 1em auto 1em;
+}
+
+input[type=text] {
+    padding: 0.5em;
+    border: 1px solid #999;
+    width: 20em;
+    display: block;
+    font-family: helveticaneue, "Helvetica Neue", helvetica, sans-serif;
+    font-size: 100%;
+}
+
+label {
+    display: block;
+    font-size: 85%;
+    margin-bottom: 0.2em;
+    color: #333;
+}
+
+.group {
+    margin: 0 0 1em;
+}

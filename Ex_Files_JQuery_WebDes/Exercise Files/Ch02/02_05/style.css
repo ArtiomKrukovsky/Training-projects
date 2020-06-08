@@ -1,0 +1,39 @@
+body
+{
+    background-color: #C5DAE1;
+    color: #222;
+    font-family: helvetica, sans-serif;
+}
+
+h1 {
+border-bottom: 1px solid #AE8F87;
+margin-bottom: 0.5em;
+padding-bottom: 0.5em;
+color: #3A497B;
+}
+
+#page {
+max-width: 43.75em;
+margin: 1em auto 1em;
+}
+
+input[type=text] {
+    padding: 0.5em;
+    border: 1px solid #738C94;
+    width: 20em;
+    display: block;
+    margin-bottom: 0.5em;
+    font-family: inherit;
+    font-size: 100%;
+    color: #3A497B;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25em;
+    color: #3A497B;
+}
+
+.group {
+    margin: 0 0 1.5em;
+}
