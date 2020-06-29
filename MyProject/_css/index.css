@@ -1,0 +1,261 @@
+body {
+	font: 100% Arial, Helvetica, sans-serif;
+	padding: 0 50px;
+	background: url(https://theplanets.org/wp-content/uploads/2014/12/stars.jpeg);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+.top-menu {
+  background: rgba(255,255,255,.5);
+  box-shadow: 3px 0 7px rgba(0,0,0,.3);
+  padding: 20px;
+}
+
+.top-menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.navbar-logo 
+{
+    display: inline-block;
+}
+
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+.menu-main li 
+{
+    display: inline-block;
+}
+
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  line-height: 61px;
+  padding-left: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: #0a0257;
+  transition:.3s linear;
+}
+
+.menu-main a:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: #0a0257;
+  position: absolute;
+  left: 50%;
+  transform: rotate(45deg) translateX(6.5px);
+  opacity: 0;
+  transition: .3s linear;
+}
+
+.menu-main a:hover:before 
+{
+    opacity: 1;
+}
+
+@media (max-width: 660px) {
+  .menu-main {
+    float: none;
+    padding-top: 20px;
+  }
+      
+  .top-menu {
+    text-align: center;
+    padding: 20px 0 0 0;
+  }
+      
+  .menu-main a {
+      padding: 0 10px;
+  }
+      
+  .menu-main a:before {
+      transform: rotate(45deg) translateX(-6px);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-main li {
+      display: block;
+  }
+}
+
+.site-container{
+    padding: .7em 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+img.logo{
+    width: 80px;
+    height: 70px;
+}
+
+img.content-image{
+  width: 100%;
+  max-width: 50em;
+  height: auto;
+}
+
+.some{
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(38, 15, 75);
+  padding: 5px 10px;
+}
+
+h1 {
+	font-size: 2em;
+	margin: .7em 0 ;
+}
+
+h3.planet-name{
+  margin: 1em 0 0 5.5em;
+  padding: 0;
+}
+
+p {
+	line-height: 1.6;
+	text-align: justify;
+	margin: 0;
+	margin-bottom: 1em;
+}
+
+section.space {
+	font: .8em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background:url(https://theplanets.org/wp-content/uploads/2014/12/stars.jpeg);
+	padding: 25px;
+	padding-top: 1em;
+  width: 500px;
+  float: right;
+  margin: .9em;
+}
+
+#tabContainer h4 {
+	color: rgb(83, 104, 138);
+	font-size: 2em;
+}
+
+#tabs{
+	height:30px;
+	overflow:hidden;
+}
+
+#tabs > ul{
+	font: 1em;
+	list-style:none;
+}
+#tabs ul, #tabs li {
+	margin:0;
+	padding:0;
+}
+
+#tabs > ul > li{
+	margin:0 2px 0 0;
+	padding:7px 10px;
+	display:block;
+	float:left;
+	color:#FFF;
+	border-top-left-radius:4px;
+	border-top-right-radius: 4px;
+	background: #CCC;
+}
+
+#tabs > ul > li:hover{
+	background: white; 
+	cursor:pointer;
+}
+
+#tabs > ul > .active{
+	background: white; /* old browsers */
+	cursor:pointer;
+}
+
+#containers div {
+	background: white;
+	padding:10px 10px 25px;
+	margin:0;
+	color:#333;
+}
+#tabs a {
+	text-decoration: none;
+	color: black;
+}
+
+.facts-list li{
+  font: 100% Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.05em;
+}
+
+.group{
+  display: inline-block;
+}
+
+.group.info{
+  float: right;;
+}
+
+img.info-image{
+  width: 100%;
+  max-width: 25em;
+  height: auto;
+}
+
+.group-info{
+ text-align: right;
+}
+
+div.content{
+  margin: 1em;
+}
+
+div.info{
+  display: inline;
+}
+
+p.text-content{
+  max-width: 50%;
+  float: right;
+}
+
+div#image-info{
+  max-width: 50%;
+  display: inline;
+}
+
+p.fright, .fright a{
+  font-weight: 700;
+  text-decoration: none;
+  color: #888;
+  padding: 0.6em 0;
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.fright a:hover{
+  color: rgb(102, 102, 102);
+}
+
+footer{
+  padding: .7em 20px;
+  background-color: white;
+  max-width: 960px;
+  margin: 0 auto;
+  border-top: .5px solid rgba(116, 114, 114, 0.288);
+}

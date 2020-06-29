@@ -10,12 +10,14 @@
   <h1>HTML Essential Training</h1>
   <h2>HTML Reference</h2>
   <nav role="navigation">
-    <p><a href="intro.htm" title="Introduction to HTML">Introduction to HTML</a></p>
-    <p><a href="syntax.htm" title="HTML syntax">HTML syntax</a></p>
-    <p><a href="structure.htm" title="Structuring pages">Structuring pages</a></p>
-    <p><a href="links.htm" title="Creating links">Creating links</a></p>
-    <p><a href="reference.htm" title="HTML Reference">HTML reference</a></p>
-    <p><a href="next.htm" title="Next steps">Next steps</a></p>
+    <ul>
+      <li><p><a href="intro.htm" title="Introduction to HTML">Introduction to HTML</a></p></li>
+      <li><p><a href="syntax.htm" title="HTML syntax">HTML syntax</a></p></li>
+      <li><p><a href="structure.htm" title="Structuring pages">Structuring pages</a></p></li>
+      <li><p><a href="links.htm" title="Creating links">Creating links</a></p></li>
+      <li><p><a href="reference.htm" title="HTML Reference">HTML reference</a></p></li>
+      <li><p><a href="next.htm" title="Next steps">Next steps</a></p></li>
+    </ul>
   </nav>
 </header>
 <main role="main">
@@ -25,48 +27,50 @@
     </header>
     <section>
       <h3>HTML Terms</h3>
-      <p>Attribute</p>
-      <p> An HTML element property that provides additional information or functionality for an element. Attributes appear as a name/value pair with the value contained in quotation marks. </p>
-      <p>Block-Level Element</p>
-      <p>HTML tags that create blocks of content within the document such as headings and paragraphs. Block-level elements typically stack one on top of each other based on the order they appear in the code. </p>
-      <p>Child Element </p>
-      <p>Any HTML element that is contained inside another HTML element. Child element tags must close before their parent element tags. </p>
-      <p>Closing Tag </p>
-      <p>Appears after an element&rsquo;s content and indicates the end of an element. Is identical to an element&rsquo;s opening tag with the addition of a forward slash (/) prior to the tag&rsquo;s character. </p>
-      <p>Comment </p>
-      <p>Reference information added to the code. May include an overview of more complex code, a reminder for future authors, or communications within a team. </p>
-      <p>CMS </p>
-      <p>CMS is short for <b>Content Management System</b>, and refers to any system designed to allow users to create and maintain content. For the web, it primarily refers to software designed to manage web sites and their content. Examples include Joomla! and WordPress.</p>
-      <p>CSS </p>
-      <p>Cascading Style Sheets (CSS)is a presentation language used to control the presentation and layout of web pages. </p>
-      <p>Doctype </p>
-      <p>Short for <b>Document Type Declaration</b>. Appears at the top of all HTML documents to trigger standards mode and identifies the version of HTML used by the document. </p>
-      <p>DOM </p>
-      <p>The DOM, or <b>Document Object Model</b>, is a representation of documents like HTML. The DOM can be thought of as an outline where tags are represented by &ldquo;nodes.&rdquo; Scripting languages like JavaScript reference the DOM when accessing or modifying page content. </p>
-      <p>Elements </p>
-      <p>HTML elements consist of an HTML tag, used to identify the content, and the content itself. Is often used interchangeably with the term &ldquo;tags&rdquo; although technically tags only refer to the tag itself. </p>
-      <p>FTP </p>
-      <p>FTP stands for <b>File Transfer Protocol</b>. It&rsquo;s a common protocol used for transferring large files from one server to another. </p>
-      <p>HTTP </p>
-      <p>HTTP, or <b>Hypertext Transfer Protocol</b>, controls the formatting and transmission of HTML pages across web servers. </p>
-      <p>Inline-Level Elements </p>
-      <p>Elements that appear within the normal flow of text. Unlike block-level elements, inline-level elements do not start new lines within the normal document flow. </p>
-      <p>JavaScript </p>
-      <p>Scripting language developed by Netscape and used to control much of the functionality and behavior on the web. </p>
-      <p>Metadata </p>
-      <p>Additional information about the document or document content, typically stored in meta tags. </p>
-      <p>MIME Type </p>
-      <p>Short for <b>Multipurpose Internet Mail Extension,</b> MIME types are used to tell user agents what type of program a file or extension is. Without a proper MIME type, user agents can have trouble properly running applications or processing files. </p>
-      <p>Parent Element </p>
-      <p>An HTML element that contains another element. It is possible for an element to be a child of one element and the parent of another. </p>
-      <p>Replaced Element </p>
-      <p>Any HTML element where the contents of the element are replaced by something else. Examples would be images, video, or other plug-in content. </p>
-      <p>Tag </p>
-      <p>Markup characters that indicate what type of content appear on the page. Most tags consist of both an opening and closing tag. </p>
-      <p>URL </p>
-      <p>URL stands for <b>Uniform Resource Locator</b>. It serves as the address of a document or other resource on the web. </p>
-      <p>W3C </p>
-      <p>The W3C, or <b>World Wide Web Consortium</b>, is the standards body responsible for authoring the HTML specification. </p>
+      <dl>
+        <dt>Attribute</dt>
+        <dd> An HTML element property that provides additional information or functionality for an element. Attributes appear as a name/value pair with the value contained in quotation marks. </dd>
+        <dt>Block-Level Element</dt>
+        <dd>HTML tags that create blocks of content within the document such as headings and paragraphs. Block-level elements typically stack one on top of each other based on the order they appear in the code. </dd>
+        <dt>Child Element </dt>
+        <dd>Any HTML element that is contained inside another HTML element. Child element tags must close before their parent element tags. </dd>
+        <dt>Closing Tag </dt>
+        <dd>Appears after an element&rsquo;s content and indicates the end of an element. Is identical to an element&rsquo;s opening tag with the addition of a forward slash (/) prior to the tag&rsquo;s character. </dd>
+        <dt>Comment </dt>
+        <dd>Reference information added to the code. May include an overview of more complex code, a reminder for future authors, or communications within a team. </dd>
+        <dt>CMS </dt>
+        <dd>CMS is short for <b>Content Management System</b>, and refers to any system designed to allow users to create and maintain content. For the web, it primarily refers to software designed to manage web sites and their content. Examples include Joomla! and WordPress.</dd>
+        <dt>CSS </dt>
+        <dd>Cascading Style Sheets (CSS)is a presentation language used to control the presentation and layout of web pages. </dd>
+        <dt>Doctype </dt>
+        <dd>Short for <b>Document Type Declaration</b>. Appears at the top of all HTML documents to trigger standards mode and identifies the version of HTML used by the document. </dd>
+        <dt>DOM </dt>
+        <dd>The DOM, or <b>Document Object Model</b>, is a representation of documents like HTML. The DOM can be thought of as an outline where tags are represented by &ldquo;nodes.&rdquo; Scripting languages like JavaScript reference the DOM when accessing or modifying page content. </dd>
+        <dt>Elements </dt>
+        <dd>HTML elements consist of an HTML tag, used to identify the content, and the content itself. Is often used interchangeably with the term &ldquo;tags&rdquo; although technically tags only refer to the tag itself. </dd>
+        <dt>FTP </dt>
+        <dd>FTP stands for <b>File Transfer Protocol</b>. It&rsquo;s a common protocol used for transferring large files from one server to another. </dd>
+        <dt>HTTP </dt>
+        <dd>HTTP, or <b>Hypertext Transfer Protocol</b>, controls the formatting and transmission of HTML pages across web servers. </dd>
+        <dt>Inline-Level Elements </dt>
+        <dd>Elements that appear within the normal flow of text. Unlike block-level elements, inline-level elements do not start new lines within the normal document flow. </dd>
+        <dt>JavaScript </dt>
+        <dd>Scripting language developed by Netscape and used to control much of the functionality and behavior on the web. </dd>
+        <dt>Metadata </dt>
+        <dd>Additional information about the document or document content, typically stored in meta tags. </dd>
+        <dt>MIME Type </dt>
+        <dd>Short for <b>Multipurpose Internet Mail Extension,</b> MIME types are used to tell user agents what type of program a file or extension is. Without a proper MIME type, user agents can have trouble properly running applications or processing files. </dd>
+        <dt>Parent Element </dt>
+        <dd>An HTML element that contains another element. It is possible for an element to be a child of one element and the parent of another. </dd>
+        <dt>Replaced Element </dt>
+        <dd>Any HTML element where the contents of the element are replaced by something else. Examples would be images, video, or other plug-in content. </dd>
+        <dt>Tag </dt>
+        <dd>Markup characters that indicate what type of content appear on the page. Most tags consist of both an opening and closing tag. </dd>
+        <dt>URL </dt>
+        <dd>URL stands for <b>Uniform Resource Locator</b>. It serves as the address of a document or other resource on the web. </dd>
+        <dt>W3C </dt>
+        <dd>The W3C, or <b>World Wide Web Consortium</b>, is the standards body responsible for authoring the HTML specification. </dd>
+      </dl>
     </section>
     <section>
       <table border="1" cellspacing="0" cellpadding="0" summary="A quick reference of named character entities, including an example of the character, a description, and the entity code.">

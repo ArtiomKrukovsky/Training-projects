@@ -9,18 +9,22 @@
   <header role="banner">
     <h1>HTML Essential Training</h1>
     <h2>Creating Links</h2>
-    <ul>
-      <li><a href="intro.htm" title="Introduction to HTML">Introduction to HTML</a></li>
-      <li><a href="syntax.htm" title="HTML syntax">HTML syntax</a></li>
-      <li><a href="structure.htm" title="Structuring pages">Structuring pages</a></li>
-      <li><a href="links.htm" title="Creating links">Creating links</a></li>
-      <li><a href="reference.htm" title="HTML Reference">HTML reference</a></li>
-      <li><a href="next.htm" title="Next steps">Next steps</a></li>
-    </ul>
-    <p>Perhaps the most important aspect of HTML is the ability to link from one document to another. This is the basic concept underlying the web and without this functionality the World Wide Web would not exist. </p>
+    <nav role="navigation">
+      <ul>
+        <li><a href="intro.htm" title="Introduction to HTML">Introduction to HTML</a></li>
+        <li><a href="syntax.htm" title="HTML syntax">HTML syntax</a></li>
+        <li><a href="structure.htm" title="Structuring pages">Structuring pages</a></li>
+        <li><a href="links.htm" title="Creating links">Creating links</a></li>
+        <li><a href="reference.htm" title="HTML Reference">HTML reference</a></li>
+        <li><a href="next.htm" title="Next steps">Next steps</a></li>
+      </ul>
+    </nav>
   </header>
   <main role="main">
     <article role="article">
+      <header>
+        <p>Perhaps the most important aspect of HTML is the ability to link from one document to another. This is the basic concept underlying the web and without this functionality the World Wide Web would not exist. </p>
+      </header>
       <section>
         <h3>Link syntax</h3>
         <p>Creating links is relatively straightforward, and the syntax provides a lot of flexibility in where and how links are applied. To create a link, you&rsquo;ll use the anchor element (&lt;a&gt;) to wrap the content you wish to convert to a link.&nbsp; Attributes inside the anchor tag tell the browser where the page is linking to, or point to an external resource that the browser should download.<br>
@@ -59,7 +63,7 @@
       </section>
     </article>
   </main>
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; <a href="http://www.lynda.com" title="lynda.com" target="_blank">lynda.com</a> | follow me and lynda.com on Twitter! <a href="https://twitter.com/jameswillweb" title="Follow me on Twitter">@jameswillweb</a> <a href="https://twitter.com/lynda" title="Follow lynda.com on Twitter">@lyndadotcom</a></p>
   </footer>
 </body>
