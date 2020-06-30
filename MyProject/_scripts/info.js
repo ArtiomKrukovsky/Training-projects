@@ -40,7 +40,7 @@
     function showInfo(planet){
         var result = document.getElementById('image-info');
         result.innerHTML = '<h3 class="planet-name">Planet name: ' + planet + '</h3><br>';
-        result.innerHTML += '<img class="info-image" src="_images/'+ planet +'.jpg" alt="planet">';
+        result.innerHTML += '<img src="_images/'+ planet +'.jpg" alt="planet">';
 
         if(typeof planet === "string"){
             var planetName = planet.toLowerCase();
