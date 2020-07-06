@@ -3,17 +3,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+
 import { AppComponent } from './app.component';
-import { ArtistItemsComponent } from './artist-items/artist-items.component';
-import { SearchArtistsPipe } from './search-artists.pipe';
-import { ArtistDetailsComponent } from './artist-details/artist-details.component';
+import { NavigationComponent } from './app.navigation/app.navigation.component';
+import { CorouselItemComponent } from './corousel-item/corousel-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArtistItemsComponent,
-    SearchArtistsPipe,
-    ArtistDetailsComponent
+    NavigationComponent,
+    CorouselItemComponent
   ],
   imports: [
     BrowserModule,
@@ -23,4 +22,5 @@ import { ArtistDetailsComponent } from './artist-details/artist-details.componen
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}

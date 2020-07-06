@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Apple iPhone XS Max",
+        "shortname":"Apple_iPhone_XS_Max",
+        "price": 849.99,
+        "details": "Woot is offering the New Condition Apple iPhone XS Max 512GB 6.5\" OLED Unlocked Smartphone w/ A12 Bionic Chip, IP68 Dust & Water Resistance, 1 Year Apple Warranty for a low $849.99. Free Shipping for Amazon Prime Members or $6 Shipping. In comparison, Apple sells the refurbished Model for $1099, you're getting this brand new with the same warranty."
+    },
+    {
+        "name": "OnePlus 8 128GB",
+        "shortname":"OnePlus_8",
+        "price": 699.00,
+        "details": "Amazon now carries the OnePlus 8 6.55\" 2400x1080 AMOLED 90Hz 128GB Smartphone starting from $699.00 Free Shipping. The 256GB OnePlus 8 is only $100 more."
+    },
+    {
+        "name": "Samsung Galaxy Z Flip Smartphone",
+        "shortname":"Samsung_Galaxy_Z_Flip_Smartphone",
+        "price": 1380.00,
+        "details": "Samsung just announced their newest Samsung Galaxy Z Flip Smartphone starting from $1380.00 Free Shipping. If you plan on picking it up on same day at Sprint, we recommend you order online and choose store pick-up option where available since supplies are limited."
+    },
+    {
+        "name": "Apple Refurbished: iPhone 8, X, XS models",
+        "shortname":"Apple_Refurbished",
+        "price": 599.00,
+        "details": "Apple is offering Refurbished iPhone 8. X, XS Unlocked Smartphones w/ 1 year Apple Warranty starting from $469.00 Free Shipping. Stock is very limited and can fluctuate. Some examples:"
+    }
+]

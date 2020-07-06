@@ -1,0 +1,22 @@
+<div class="container">
+  <app-navigation [title]="title"></app-navigation>
+  <app-corousel-item class="mt-5"></app-corousel-item>
+  <div class="row mt-4">
+    <div class="col-lg-6" *ngFor="let product of products">
+      <div class="media">
+        <img class="rounded align-self-center img-fluid" style="width: 200px; height: 200px;" [src]="'./assets/images/products/' + product.shortname + '.jpg'" 
+          alt="{{ product.shortname }}">
+        <div class="media-body align-self-center">
+          <h3>{{ product.name }}</h3>
+          <p>
+            <b>{{'Price: $'+ product.price}}</b>
+          </p>
+          <p class="details">{{ product.details }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer role="contentinfo">
+    <p class="fright"> &copy; <a href="https://www.linkedin.com/in/artsiom-krukouski/">Artsiom Krukouski</a></p>
+  </footer>
+</div>

@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: rgb(38, 15, 75);
+    padding: 5px 10px;
+}
+
+h1 {
+	font-size: 2em;
+	margin: .3em 0 ;
+}
+
+p.fright, .fright a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #888;
+    padding: 0.6em 0;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+.fright a:hover {
+    color: rgb(102, 102, 102);
+}
+
+footer {
+    padding: .7em 20px;
+    background-color: white;
+    max-width: 960px;
+    margin: 0 auto;
+    border-top: .5px solid rgba(116, 114, 114, 0.288);
+}
