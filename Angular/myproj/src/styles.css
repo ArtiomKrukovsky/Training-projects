@@ -11,6 +11,10 @@ h1 {
 	margin: .3em 0 ;
 }
 
+link:hover {
+    color: red; /* Цвет ссылки */
+} 
+
 p.fright, .fright a {
     font-weight: 700;
     text-decoration: none;

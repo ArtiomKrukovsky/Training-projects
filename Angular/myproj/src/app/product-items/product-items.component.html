@@ -1,0 +1,11 @@
+<div class="media">
+    <a class="link" href="#">
+        <img class="rounded align-self-center img-fluid" [src]="'./assets/images/products/' + product.shortname + '.jpg'" 
+        style="width: 200px; height: 200px;"  alt="{{ product.shortname }}">
+    </a>
+    <div class="media-body align-self-center">
+        <a class="link" href="#"><h3>{{ product.name }}</h3></a>
+        <p><b>{{'Price: $'+ product.price}}</b></p>
+        <p class="details">{{ product.details }}</p>
+    </div>
+</div>

@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NavigationComponent implements OnInit {
   @Input() title: object;
 
+  search: string;
   constructor() { }
 
   ngOnInit(): void {

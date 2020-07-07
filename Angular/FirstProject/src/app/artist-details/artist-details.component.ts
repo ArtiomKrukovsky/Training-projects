@@ -6,10 +6,17 @@ import { Component, OnInit, Input } from '@angular/core';
   inputs: ['artist']
 })
 export class ArtistDetailsComponent implements OnInit {
-  @Input() artist: object;
+  @Input() artist: Artist;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+}
+
+interface Artist{
+  name: string,
+  shortname: string,
+  reknown: string
+  bio: string
 }

@@ -9,6 +9,12 @@ import $ from 'jquery';
 export class AppComponent implements OnInit{
   products: object;
   title = 'TechStore';
+  
+  currentProduct: Product;
+
+  showProduct(product){
+    this.currentProduct = product;
+  }
 
   constructor(private http: HttpClient){
   }
@@ -31,4 +37,11 @@ export class AppComponent implements OnInit{
       });
     });
   }
+}
+
+interface Product {
+  name: string,
+  shortname: string,
+  price: number,
+  details: string
 }

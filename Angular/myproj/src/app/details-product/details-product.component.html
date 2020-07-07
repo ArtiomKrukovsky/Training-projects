@@ -1,0 +1,22 @@
+<div class="modal fade" id="productPopup" tabindex="-1" role="dialog" aria-labelledby="productPopupTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="productPopupLongTitle">{{currentProduct.name}}</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body align-self-center">
+          <img class="rounded align-self-center img-fluid" [src]="'./assets/images/products/' + currentProduct.shortname + '.jpg'" 
+          style="width: 200px; height: 200px; float: right;"  alt="{{ currentProduct.shortname }}">
+          <p class="price">{{'Price: $'+ currentProduct.price}}</p>
+          <p>{{currentProduct.details}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Buy</button>
+        </div>
+      </div>
+    </div>
+</div>

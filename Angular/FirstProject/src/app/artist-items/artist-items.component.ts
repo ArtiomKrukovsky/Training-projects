@@ -5,11 +5,18 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './artist-items.component.html'
 })
 export class ArtistItemsComponent implements OnInit {
-  @Input() artist: object;
+  @Input() artist: Artist;
   
   constructor() { }
 
   ngOnInit() {
   }
 
+}
+
+interface Artist{
+  name: string,
+  shortname: string,
+  reknown: string
+  bio: string
 }
