@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using ExploreCalifornia.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,9 +19,31 @@ namespace ExploreCalifornia.Controllers
         }
 
         [Route("")]
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int page = 0)
         {
-            var posts = await _dbContext.Posts.OrderByDescending(x=> x.Posted).Take(5).ToListAsync();
+            var pageSize = 2;
+            var totalPosts = _dbContext.Posts.Count();
+            var totalPages = totalPosts / pageSize;
+            var previousPage = page - 1;
+            var nextPage = page + 1;
+
+            ViewBag.PreviousPage = previousPage;
+            ViewBag.HasPreviousPage = previousPage >= 0;
+            ViewBag.NextPage = nextPage;
+            ViewBag.HasNextPage = nextPage < totalPages;
+
+            var posts =
+                _dbContext.Posts
+                    .OrderByDescending(x => x.Posted)
+                    .Skip(pageSize * page)
+                    .Take(pageSize)
+                    .ToArray();
+
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                return PartialView(posts);
+            }
+
             return View(posts);
         }
 
@@ -33,6 +56,7 @@ namespace ExploreCalifornia.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         [Route("create")]
         public IActionResult Create()
         {
