@@ -1,0 +1,56 @@
+<div class="container">
+  <br>
+  <h4><mark>Car:</mark> {{name}}
+    <small>{{model}}</small>
+  </h4>
+  <div class="alert alert-success">
+    Car details:
+    <ul>
+      <li>Speed: <strong>{{speed}}</strong>km</li>
+      <li>Car color: <strong>{{colors.car}}</strong></li>
+      <li>Salon color: <strong>{{colors.salon}}</strong></li>
+      <li>Wheels color: <strong>{{colors.wheels}}</strong></li>
+    </ul>
+  </div>
+  <button type="button" class="btn btn-dark mb-2" (click)="showEdit()">
+    Edit
+  </button>
+  <h5>Edit car:</h5>
+  <form class="form-group" *ngIf="isEdit">
+    <input [(ngModel)]="name" name="name" class="form-control" type="text" placeholder="Car name"><br>
+    <input [(ngModel)]="speed" name="speed" class="form-control" type="number" placeholder="Speed"><br>
+    <input [(ngModel)]="model" name="model" class="form-control" type="text" placeholder="Model"><br>
+    <input [(ngModel)]="colors.car" name="car" class="form-control" type="text" placeholder="Car color"><br>
+    <input [(ngModel)]="colors.salon" name="salon" class="form-control" type="text" placeholder="Salon color"><br>
+    <input [(ngModel)]="colors.wheels" name="wheels" class="form-control" type="text" placeholder="Wheels color">
+  </form>
+
+  <h5>Cars options:</h5>
+  <form class="form-group" (submit)="addOption(option.value)">
+    <label for="option">Add new option</label>
+    <input class="form-control" type="text" id="option" placeholder="Enter something" #option>
+    <br>
+    <button type="submit" class="btn btn-outline-success">Add</button>
+  </form>
+  <div class="alert alert-warning">
+    <ul>
+      <li *ngFor="let option of options; let i = index">
+        {{ option }} 
+        <button type="button" class="btn btn-danger btn-sm" (click)="deleteOption(i)">x</button>
+      </li>
+    </ul>
+  </div>
+
+  <h5>Choose your car</h5>
+  <div class="">
+    <button type="button" class="btn btn-danger" (click)="carSelect('bmw')">
+      BMW
+    </button>
+    <button type="button" class="btn btn-success" (click)="carSelect('audi')">
+      Audi
+    </button>
+    <button type="button" class="btn btn-info" (click)="carSelect('mercedes')">
+      Mercedes
+    </button>
+  </div>
+</div>
